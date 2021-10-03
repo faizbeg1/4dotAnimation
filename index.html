@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Assignment</title>
+  <style>
+
+  
+:root {
+  --dotDiameter: 50px;
+  --container: 200px;
+  --redColor: #e01563;
+  --aquaColor: #6ecadc;
+  --yellowColor: #e9a820;
+  --greenYellowColor: #3eb991;
+  --animationTime: 10s;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot_container {
+  width: var(--container);
+  height: var(--container);
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  position: relative;
+}
+
+.dot {
+  height: var(--dotDiameter);
+  width: var(--dotDiameter);
+  border-radius: calc(var(--dotDiameter)/2);
+  position: absolute;
+  display: block;
+}
+
+.button_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+button{
+    background-color: var(--greenYellowColor);
+    margin-right: 30px;
+}
+
+.dot1 {
+  top: 0;
+  left: 0;
+  /* animation: dot1Animation var(--animationTime) linear infinite; */
+    background-color:var(--redColor)
+}
+.dot2 {
+  top: 0;
+  right: 0;
+  /* animation: dot2Animation var(--animationTime) linear infinite; */
+    background-color:var(--aquaColor) ;
+}
+.dot3 {
+  bottom: 0;
+  left: 0;
+  /* animation: dot3Animation var(--animationTime) linear infinite; */
+    background-color: var(--yellowColor);
+}
+.dot4 {
+  right: 0;
+  bottom: 0;
+  /* animation: dot4Animation var(--animationTime) linear infinite; */
+    background-color: var(--greenYellowColor);
+}
+.dot1Animation{
+    top: 0;
+    left: 0;
+  animation: dot1Animation var(--animationTime) linear infinite;
+}
+.dot2Animation{
+    top: 0;
+    right: 0;
+  animation: dot2Animation var(--animationTime) linear infinite;
+}
+.dot3Animation{
+    bottom: 0;
+    left: 0;
+  animation: dot3Animation var(--animationTime) linear infinite;
+}
+.dot4Animation{
+    right: 0;
+    bottom: 0;
+  animation: dot4Animation var(--animationTime) linear infinite;
+}
+
+
+
+@keyframes dot1Animation {
+  0% {
+    width: var(--dotDiameter);
+    background-color: var(--redColor);
+  }
+  12.5% {
+    width: var(--container);
+    background-color: var(--aquaColor);
+  }
+  25% {
+    width: var(--dotDiameter);
+    background-color: var(--aquaColor);
+  }
+  37.5% {
+    width: var(--container);
+    background-color: var(--yellowColor);
+  }
+  50% {
+    width: var(--dotDiameter);
+    background-color: var(--yellowColor);
+  }
+  62.5% {
+    width: var(--container);
+    background-color: var(--greenYellowColor);
+  }
+  75% {
+    width: var(--dotDiameter);
+    background-color: var(--greenYellowColor);
+  }
+  87.5% {
+    width: var(--container);
+    background-color: var(--redColor);
+  }
+  100% {
+    width: var(--dotDiameter);
+    background-color: var(--redColor);
+  }
+}
+
+@keyframes dot2Animation {
+  0% {
+    height: var(--dotDiameter);
+    background-color: var(--aquaColor);
+  /* border-radius: 50%; */
+  }
+  12.5% {
+    height: var(--container);
+    background-color: var(--yellowColor);
+  }
+  25% {
+    height: var(--dotDiameter);
+    background-color: var(--yellowColor);
+  }
+  37.5% {
+    height: var(--container);
+    background-color: var(--greenYellowColor);
+  }
+  50% {
+    height: var(--dotDiameter);
+    background-color: var(--greenYellowColor);
+    /* border-radius: 40%; */
+  }
+  62.5% {
+    height: var(--container);
+    background-color: var(--redColor);
+  }
+  75% {
+    height: var(--dotDiameter);
+    background-color: var(--redColor);
+  }
+  87.5% {
+    height: var(--container);
+    background-color: var(--aquaColor);
+  }
+  100% {
+    height: var(--dotDiameter);
+    background-color: var(--aquaColor);
+    /* border-radius: 50%; */
+  }
+}
+
+@keyframes dot3Animation {
+  0% {
+    height: var(--dotDiameter);
+    background-color: var(--yellowColor);
+  /* border-radius: 50%; */
+  }
+  12.5% {
+    height: var(--container);
+    background-color: var(--greenYellowColor);
+  }
+  25% {
+    background-color: var(--greenYellowColor);
+    height: var(--dotDiameter);
+  }
+  37.5% {
+    height: var(--container);
+    background-color: var(--redColor);
+  }
+  50% {
+    height: var(--dotDiameter);
+    background-color: var(--redColor);
+    /* border-radius: 40%; */
+  }
+  62.5% {
+    height: var(--container);
+    background-color: var(--aquaColor);
+  }
+  75% {
+    background-color: var(--aquaColor);
+    height: var(--dotDiameter);
+  }
+  87.5% {
+    height: var(--container);
+    background-color: var(--yellowColor);
+  }
+  100% {
+    background-color: var(--yellowColor);
+    height: var(--dotDiameter);
+    /* border-radius: 50%; */
+  }
+}
+
+@keyframes dot4Animation {
+  0% {
+    width: var(--dotDiameter);
+    background-color: var(--greenYellowColor);
+  /* border-radius: 50%; */
+  }
+  12.5% {
+    width: var(--container);
+    background-color: var(--redColor);
+  }
+  25% {
+    background-color: var(--redColor);
+    width: var(--dotDiameter);
+  }
+  37.5% {
+    width: var(--container);
+    background-color: var(--aquaColor);
+  }
+  50% {
+    width: var(--dotDiameter);
+    background-color: var(--aquaColor);
+    /* border-radius: 40%; */
+  }
+  62.5% {
+    width: var(--container);
+    background-color: var(--yellowColor);
+  }
+  75% {
+    background-color: var(--yellowColor);
+    width: var(--dotDiameter)
+  }
+  87.5% {
+    width: var(--container);
+    background-color: var(--greenYellowColor);
+  }
+  100% {
+    background-color: var(--greenYellowColor);
+    width: var(--dotDiameter);
+    /* border-radius: 50%; */
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="dot_container">
+      <div id="dot1" class="dot1 dot"></div>
+      <div id="dot2" class="dot2 dot"></div>
+      <div  id="dot3" class="dot3 dot"></div>
+      <div id="dot4"   class="dot4 dot"></div>
+    </div>
+</div>
+      <div class="button_container">
+          <button onclick="start()"> start</button>
+          <button onclick="stop()"> stop</button>
+
+      </div>
+    
+  
+  <script >
+
+        function start(){
+            var element=document.getElementById("dot1")
+            element.classList.add('dot1Animation')
+            var element=document.getElementById("dot2")
+            element.classList.add('dot2Animation')
+            var element=document.getElementById("dot3")
+            element.classList.add('dot3Animation')
+            var element=document.getElementById("dot4")
+            element.classList.add('dot4Animation')
+        }
+
+        function stop(){
+            var element=document.getElementById("dot1")
+            element.classList.remove('dot1Animation')
+            var element=document.getElementById("dot2")
+            element.classList.remove('dot2Animation')
+            var element=document.getElementById("dot3")
+            element.classList.remove('dot3Animation')
+            var element=document.getElementById("dot4")
+            element.classList.remove('dot4Animation')
+
+
+
+        }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+</body>
+</html>
